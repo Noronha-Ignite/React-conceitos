@@ -33,6 +33,8 @@ export function TaskList() {
     
     event.preventDefault();
 
+    if (!newTaskTitle.trim()) return;
+
     let randomId = generateId();
 
     setTasks(previewTasks => [...previewTasks, { 
